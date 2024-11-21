@@ -4,6 +4,7 @@ out
 gen
 instance/*
 !instance/.gitignore
+migrations/
 .webassets-cache
 .env
 __pycache__/
