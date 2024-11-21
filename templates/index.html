@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Itens</title>
+    <!-- Certifique-se de que o link para o CSS está correto -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Lista de Itens</h1>
+    </header>
+
+    <nav>
+        <a href="{{ url_for('tool.index') }}">Página Inicial</a>
+        <a href="{{ url_for('tool.adicionar') }}">Adicionar Item</a>
+    </nav>
+
+    <section>
+        <h2>Itens Disponíveis</h2>
+        <ul>
+            {% for item in items %}
+                <li>
+                    {{ item.nome }} - R${{ item.preco }}
+                    {% if item.nome_retirada %}
+                        - Retirado por: {{ item.nome_retirada }} (CPF: {{ item.cpf_retirada }})
+                    {% endif %}
+                    <form action="{{ url_for('tool.remover', item_id=item.id) }}" method="POST">
+                        <button type="submit">Remover</button>
+                    </form>
+                </li>
+            {% endfor %}
+        </ul>
+    </section>
+    
+</body>
+</html>

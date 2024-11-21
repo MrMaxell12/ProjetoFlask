@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remover Item</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <section>
+        <form action="{{ url_for('tool.remover', item_id=item.id) }}" method="POST">
+            <label for="nome_retirada">Nome do Cliente:</label>
+            <input type="text" name="nome_retirada" id="nome_retirada" required><br><br>
+        
+            <label for="cpf_retirada">CPF do Cliente:</label>
+            <input type="text" name="cpf_retirada" id="cpf_retirada" required><br><br>
+        
+            <button type="submit">Confirmar Retirada</button>
+        </form>
+    </section>
+</head>
+<body>
+    <header>
+        <h1>Remover Item: {{ item.nome }}</h1>
+    </header>
+
+</body>
+</html>
