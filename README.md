@@ -1,3 +1,6 @@
+# Tenha certeza que a pasta aberta no vc é a pasta principal, o projeto tem que ter somente uma página raiz, geralmente chamada PROJETOFLASK/coisas aqui dentro
+
+
 # Inicializar o ambiente pyhton
 
 ## Instalar o _virtualenv_
@@ -18,8 +21,7 @@ ou
 ## Instar todas as dependências do projeto
 `pip install -r requirements.txt`
 
-## Executar a aplicação
-`flask --app app run` "# flask-projeto-yuri" 
+# Rodar o app.py pelo menos uma vez para criar os arquivos .db
 
 # Cria a pasta de migrações
 
