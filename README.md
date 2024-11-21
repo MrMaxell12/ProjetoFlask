@@ -20,3 +20,10 @@ ou
 
 ## Executar a aplicação
 `flask --app app run` "# flask-projeto-yuri" 
+
+# Cria a pasta de migrações
+
+`flask db init`   
+`flask db migrate` 
+`flask db upgrade` 
+
